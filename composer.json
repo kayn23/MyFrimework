@@ -1,0 +1,14 @@
+{
+    "name": "kayn23/myfrimework",
+    "description": "My frimework",
+    "require": {},
+    "require-dev": {
+        "kint-php/kint": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/",
+            "MyFrimework\\":"src/"
+    }
+    }
+}
