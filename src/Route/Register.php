@@ -16,20 +16,27 @@ class Register
 
     //todo в перспективе put delete
 
-    public static function get($url,$controller)
+    public static function get($url, $controller)
     {
-        self::$get[$url] = $controller;
+        $arr = explode('@', $controller);
+        self::$get[$url] = [
+            'controller' => 'App\Controller\\' . $arr[0],
+            'action' => $arr[1]
+        ];
     }
 
-    public static function post($url,$controller)
+    public static function post($url, $controller)
     {
-        self::$post[$url] = $controller;
+        $arr = explode('@', $controller);
+        self::$post[$url] = [
+            'controller' => $arr[0],
+            'action' => $arr[1]
+        ];
     }
 
     protected static function method()
     {
-        switch ($_SERVER['REQUEST_METHOD'])
-        {
+        switch ($_SERVER['REQUEST_METHOD']) {
             case "GET":
                 return 'get';
                 break;
@@ -42,9 +49,12 @@ class Register
     protected static function getAction($url)
     {
         $method = self::method();
-        $control = self::$$method[$url];
-        $control = explode('@',$control);
-        $control[0] = 'App\Controller\\'.$control[0];
-        return $control;
+        if (array_search($url, self::$$method)) {
+            $method = self::$$method[$url];
+            return $method;
+        } else {
+            //todo сделать страницу ошибки
+            die('404');
+        }
     }
 }

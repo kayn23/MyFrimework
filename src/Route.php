@@ -13,8 +13,9 @@ class Route extends  Register
 {
     public static function init($url){
         $action = self::getAction($url);
-        $controller = new $action[0]();
-        $action = $action[1];
+        d($action['controller']);
+        $controller = new $action['controller']();
+        $action = $action['action'];
         $controller->$action();
     }
 }

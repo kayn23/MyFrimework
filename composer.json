@@ -1,7 +1,9 @@
 {
     "name": "kayn23/myfrimework",
     "description": "My frimework",
-    "require": {},
+    "require": {
+        "twig/twig": "^2.5"
+    },
     "require-dev": {
         "kint-php/kint": "^3.1"
     },
