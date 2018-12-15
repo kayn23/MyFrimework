@@ -15,4 +15,8 @@ class ControllerIndex
     {
         echo "hello";
     }
+    public function app($id)
+    {
+        echo "првиет $id[0]";
+    }
 }

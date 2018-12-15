@@ -17,7 +17,7 @@ class App
 //        $query_url = $_SERVER['REQUEST_URI'];
         include_once '../Route/web.php';
         if (php_sapi_name() !== 'cli' && isset($_SERVER) && isset($_GET)) {
-            Route::init($_SERVER['REQUEST_URI']);
+            new Route($_SERVER["REQUEST_URI"]);
         }
     }
 }
