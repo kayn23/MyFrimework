@@ -151,6 +151,11 @@ class DB
         }
     }
 
+    public static function lastId()
+    {
+        return self::getPDO()->lastInsertId();
+    }
+
     private static function checkError($e)
     {
         switch ($e->getCode()) {
