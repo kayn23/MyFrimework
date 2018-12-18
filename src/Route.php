@@ -31,7 +31,6 @@ class Route
                 $actionName = $route_data['action'];
 
                 $tmp = explode('|', $key);
-                d($tmp);
                 if (isset($tmp[1]))
                 {
                     $tmp = str_replace($tmp[0], '', $request_uri);
