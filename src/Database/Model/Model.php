@@ -7,8 +7,6 @@
  */
 
 namespace MyFrimework\Database\Model;
-
-
 use MyFrimework\Database\DB;
 
 class Model

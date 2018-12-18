@@ -6,7 +6,7 @@
  * Time: 13:43
  */
 
-namespace MyFrimework\Database\Controllers;
+namespace MyFrimework\Controllers;
 use MyFrimework\Code;
 
 class Controller

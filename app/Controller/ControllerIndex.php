@@ -7,8 +7,8 @@
  */
 
 namespace App\Controller;
-use MyFrimework\Database\Controllers\Controller;
-use MyFrimework\Database\Modelы\Model;
+use MyFrimework\Controllers\Controller;
+use MyFrimework\Database\Model\Model;
 
 class ControllerIndex extends Controller
 {
