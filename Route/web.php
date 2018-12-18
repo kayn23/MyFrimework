@@ -11,10 +11,10 @@ $GLOBALS['routing'] = array(
         'controller' => 'ControllerIndex',
         'action' => 'index'
     ),
-    'app' => array(
-        'controller' => 'ControllerIndex',
-        'action' => 'index'
-    ),
+//    'app' => array(
+//        'controller' => 'ControllerIndex',
+//        'action' => 'index'
+//    ),
     'app/|[\d]+'=> array(
         'controller' => 'ControllerIndex',
         'action' => 'app'

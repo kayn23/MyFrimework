@@ -21,7 +21,7 @@ class Controller
      */
     public function render($page, $var)
     {
-        $loader = new \Twig_Loader_Filesystem('../v');
+        $loader = new \Twig_Loader_Filesystem('../view');
         $twig = new \Twig_Environment($loader);
         echo $twig->render($page, $var);
     }

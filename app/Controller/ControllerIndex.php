@@ -14,10 +14,11 @@ class ControllerIndex extends Controller
 {
     public function index()
     {
-        echo "hello";
+        $this->render('main.twig',['name'=>'hello']);
     }
     public function app($id)
     {
-        echo "првиет $id[0]";
+        $data = ['id'=>$id[0]];
+        $this->json($data,200);
     }
 }
