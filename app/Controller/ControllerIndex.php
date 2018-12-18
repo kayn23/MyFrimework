@@ -7,9 +7,10 @@
  */
 
 namespace App\Controller;
+use MyFrimework\Database\Controllers\Controller;
+use MyFrimework\Database\Modelы\Model;
 
-
-class ControllerIndex
+class ControllerIndex extends Controller
 {
     public function index()
     {
